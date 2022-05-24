@@ -1,7 +1,7 @@
 const TokenUSDT = artifacts.require("TokenUSDT");
 const TokenUSDC = artifacts.require("TokenUSDC");
 const TokenXUSD = artifacts.require("TokenXUSD");
-const KStablePool = artifacts.require("KStablePool");
+const KStableTestPool = artifacts.require("KStableTestPool");
 const data = require('./conf');
 
 module.exports = function (deployer, network, accounts) {
@@ -17,7 +17,7 @@ module.exports = function (deployer, network, accounts) {
 		let adminFee = config.pool.adminFee; // 2/3
 		let name = config.pool.name;
 		let symbol = config.pool.symbol;
-		return deployer.deploy(KStablePool, [res[0].address, res[1].address, res[2].address], A, fee, adminFee, accounts[0]).then(res => {
+		return deployer.deploy(KStableTestPool, [res[0].address, res[1].address, res[2].address], A, fee, adminFee, accounts[0]).then(res => {
 			console.log('constructor[2]:' + JSON.stringify(stableCoins));
 			console.log('constructor[3]:' + A);
 			console.log('constructor[4]:' + fee);

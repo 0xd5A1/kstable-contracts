@@ -8,20 +8,20 @@ import "./interfaces/IKSTFarmingProxy.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-/// @title Implement CST's distrubution plan.
+/// @title Implement KST's distrubution plan.
 contract KSTMinter is Ownable {
     using SafeMath for uint256;
 
     /// @notice Info of each pool of proxy.
     struct PoolInfo {
         address pool; // Address of farming contract.
-        uint256 allocPoint; // How many allocation points assigned to this proxy. CSTs to distribute per block.
-        uint256 lastRewardBlock; // Last block number that CSTs distribution occurs.
+        uint256 allocPoint; // How many allocation points assigned to this proxy. KSTs to distribute per block.
+        uint256 lastRewardBlock; // Last block number that KSTs distribution occurs.
     }
     IKSTToken public KSTToken;
     /// @notice Dev address.
     address public devaddr;
-    /// @notice CST tokens created per block.
+    /// @notice KST tokens created per block.
     uint256 public tokenPerBlock = 10_833_333_333_333_333_333; // 10.833333 cst/block
     /// @notice Info of each pool of proxy.
     mapping(address => mapping(address => PoolInfo)) public poolInfo;
@@ -35,7 +35,7 @@ contract KSTMinter is Ownable {
     mapping(address => bool) public proxyExists;
     /// @notice Total allocation poitns. Must be the sum of all allocation points in all proxys.
     uint256 public totalAllocPoint = 0;
-    /// @notice The block number when CST mining starts.
+    /// @notice The block number when KST mining starts.
     uint256 public startBlock;
     /// @notice Halving Period in blocks.
     uint256 public halvingPeriod = 2_628_000;
@@ -51,7 +51,7 @@ contract KSTMinter is Ownable {
     event UpdateToken(address _tokenAddress);
     event SetHalvingPeriod(uint256 _block);
     event SetDevAddress(address _dev);
-    event MintCST(
+    event MintKST(
         address proxy,
         address pool,
         uint256 lastRewardBock,
@@ -125,7 +125,7 @@ contract KSTMinter is Ownable {
         );
     }
 
-    /// @notice Update the given proxy's CST allocation point. Can only be called by the owner.
+    /// @notice Update the given proxy's KST allocation point. Can only be called by the owner.
     /// @param _poolAddress A pool of the proxy.
     /// @param _allocPoint Proxy's allocation's weight.
     function set(address _poolAddress, uint256 _allocPoint) public {
@@ -238,7 +238,7 @@ contract KSTMinter is Ownable {
         KSTToken.mint(devaddr, tokenReward.div(10));
         KSTToken.mint(_pid, tokenReward);
         pInfo.lastRewardBlock = block.number;
-        emit MintCST(_pid, _pool, _lastRewardBlock, block.number, tokenReward);
+        emit MintKST(_pid, _pool, _lastRewardBlock, block.number, tokenReward);
         return tokenReward;
     }
 

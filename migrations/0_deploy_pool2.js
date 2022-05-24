@@ -17,7 +17,7 @@ module.exports = function (deployer, network, accounts) {
         let A = 100;
         let fee = "30000000"; // 0.003
         let adminFee = "6666666667"; // 2/3
-        let name = "CStable Pool (CUSD / CUSD / USDT)";
+        let name = "KStable Pool (CUSD / CUSD / USDT)";
         let symbol = "CSLP-02";
         return deployer.deploy(KStablePool2, name, symbol, stableCoins, A, fee, adminFee, accounts[0]).then(res => {
             console.log('constructor[0]:' + name);

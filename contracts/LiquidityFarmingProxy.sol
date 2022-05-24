@@ -21,9 +21,9 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
     /// @notice Info of each pool.
     struct PoolInfo {
         IERC20 lpToken; // Address of LP token contract.
-        uint256 accTokenPerShare; // Accumulated CSTs per share, times 1e12. See below.
+        uint256 accTokenPerShare; // Accumulated KSTs per share, times 1e12. See below.
     }
-    string public name = "CStable Liquidity Farming Proxy";
+    string public name = "KStable Liquidity Farming Proxy";
     string public symbol = "CLFP-V1";
     IKSTToken public token;
     /// @notice Info of each pool.
@@ -32,7 +32,7 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
     mapping(address => bool) public lpTokens;
     /// @notice Info of each user that stakes LP tokens.
     mapping(uint256 => mapping(address => UserInfo)) public userInfo;
-    /// @notice For mint CST
+    /// @notice For mint KST
     IKSTMinter public minter;
 
     modifier onlyMinter() {
@@ -100,7 +100,7 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
         emit AddPool(address(_lpToken));
     }
 
-    /// @notice Update the given pool's CST allocation point. Can only be called by the owner.
+    /// @notice Update the given pool's KST allocation point. Can only be called by the owner.
     function set(
         uint256 _pid,
         uint256 _allocPoint,
@@ -114,7 +114,7 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
         emit SetPool(_pid);
     }
 
-    /// @notice View function to see pending CSTs on frontend.
+    /// @notice View function to see pending KSTs on frontend.
     function pendingReward(uint256 _pid, address _user)
         external
         view
@@ -182,7 +182,7 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
         emit UpdatePool(_pid, pool.accTokenPerShare, tokenReward);
     }
 
-    /// @notice Deposit LP tokens to BStableProxyV2 for CST allocation.
+    /// @notice Deposit LP tokens to BStableProxyV2 for KST allocation.
     function deposit(uint256 _pid, uint256 _amount) public {
         require(
             _pid < poolInfo.length,
@@ -273,7 +273,7 @@ contract LiquidityFarmingProxy is Ownable, IKSTFarmingProxy {
         emit EmergencyWithdraw(msg.sender, _pid, amount_);
     }
 
-    /// @notice Safe token transfer function, just in case if rounding error causes pool to not have enough CSTs.
+    /// @notice Safe token transfer function, just in case if rounding error causes pool to not have enough KSTs.
     function safeTokenTransfer(address _to, uint256 _amount) internal {
         require(_to != address(0), "LiquidityFarmingProxy: no 0 address");
         uint256 tokenBal = token.balanceOf(address(this));
