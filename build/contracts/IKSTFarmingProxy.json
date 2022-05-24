@@ -1,0 +1,175 @@
+{
+  "contractName": "IKSTFarmingProxy",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "massUpdate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"massUpdate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/zhangleping/github.com/0x5dA1/kstable-contracts/contracts/interfaces/IKSTFarmingProxy.sol\":\"IKSTFarmingProxy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/zhangleping/github.com/0x5dA1/kstable-contracts/contracts/interfaces/IKSTFarmingProxy.sol\":{\"keccak256\":\"0x864b5d090b93f60f7a61536503f30015084ab8f3561bcc516e9f559597fbaf44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c0800bfaaf73233e03c780c82bc2404a596b4e48150abea7eaa69adb45aca175\",\"dweb:/ipfs/QmR5n3QvhSwoHn6Ua76ZrJvqfABZueF1Hn8JY4Nu4EgXPa\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ninterface IKSTFarmingProxy {\n    function massUpdate() external;\n}\n",
+  "sourcePath": "/Users/zhangleping/github.com/0x5dA1/kstable-contracts/contracts/interfaces/IKSTFarmingProxy.sol",
+  "ast": {
+    "absolutePath": "/Users/zhangleping/github.com/0x5dA1/kstable-contracts/contracts/interfaces/IKSTFarmingProxy.sol",
+    "exportedSymbols": {
+      "IKSTFarmingProxy": [
+        8441
+      ]
+    },
+    "id": 8442,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8437,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 8441,
+        "linearizedBaseContracts": [
+          8441
+        ],
+        "name": "IKSTFarmingProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "9254803a",
+            "id": 8440,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "massUpdate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8438,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:2:11"
+            },
+            "returnParameters": {
+              "id": 8439,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:0:11"
+            },
+            "scope": 8441,
+            "src": "91:31:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8442,
+        "src": "58:66:11"
+      }
+    ],
+    "src": "33:92:11"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/zhangleping/github.com/0x5dA1/kstable-contracts/contracts/interfaces/IKSTFarmingProxy.sol",
+    "exportedSymbols": {
+      "IKSTFarmingProxy": [
+        8441
+      ]
+    },
+    "id": 8442,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8437,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 8441,
+        "linearizedBaseContracts": [
+          8441
+        ],
+        "name": "IKSTFarmingProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "9254803a",
+            "id": 8440,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "massUpdate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8438,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:2:11"
+            },
+            "returnParameters": {
+              "id": 8439,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:0:11"
+            },
+            "scope": 8441,
+            "src": "91:31:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8442,
+        "src": "58:66:11"
+      }
+    ],
+    "src": "33:92:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2022-05-24T06:43:13.362Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
