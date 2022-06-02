@@ -42460,8 +42460,237 @@
         }
       },
       "links": {},
-      "address": "0x8fDab72B930bc06F17b9C605137E9E079b2b4EBb",
-      "transactionHash": "0x069c27309c4f270f45c17a4d4c4dd14714f5371f992806ee2e7867d33a029ada"
+      "address": "0xA922B81ce7166222f61C0c2fD1d6Cc7773a577d3",
+      "transactionHash": "0x899a38c33ace3bc25edfbbda7fd04888d590b7272c31233d767871c23eccf73a"
+    },
+    "2222": {
+      "events": {
+        "0x105ebf94dd0a850e02b95d0c48754fe267309ebb490ee3949d49f1090dc989f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_coin",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "name": "AddCoins",
+          "type": "event"
+        },
+        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0x8049bd343471d985a0a44482e4f7e94d9180cc4c4731c410980f5dd570489988": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "payToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "receiptToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "payer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "recipt",
+              "type": "address"
+            }
+          ],
+          "name": "Pay",
+          "type": "event"
+        },
+        "0xc0d90ee5f61611fa06580819f6c6b6a0edad1297b422e279dc926d3249d891a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_coin",
+              "type": "address"
+            }
+          ],
+          "name": "RemoveCoins",
+          "type": "event"
+        },
+        "0x8daa6bb00de042a7d51816fcee4a3d5c1e91a2128fd64fa1a9a38afa0d26beb5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_dev",
+              "type": "address"
+            }
+          ],
+          "name": "SetDev",
+          "type": "event"
+        },
+        "0xcec52196e972044edde8689a1b608e459c5946b7f3e5c8cd3d6d8e126d422e1c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IKSTMinter",
+              "name": "_minter",
+              "type": "address"
+            }
+          ],
+          "name": "SetMinter",
+          "type": "event"
+        },
+        "0x0ba1a395bffa0247eabada1d9f74ddd223a25b0f285cf799bd37d9306a27c402": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_fee",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetPaymentFee",
+          "type": "event"
+        },
+        "0x67816c9262630d6052ccaada1732fda377aa9e9abb3bc91cfd887a016a18a43a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IKStablePool",
+              "name": "_pool",
+              "type": "address"
+            }
+          ],
+          "name": "SetPool",
+          "type": "event"
+        },
+        "0xefc1fd16ea80a922086ee4e995739d59b025c1bcea6d1f67855747480c83214b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "contract IKSTToken",
+              "name": "_token",
+              "type": "address"
+            }
+          ],
+          "name": "SetToken",
+          "type": "event"
+        },
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        "0xd3fb528e913f4bbf4dce5c74bea05df6ad20573463aceba438f2747fdc8d1ab6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_quantity",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_totalQuantity",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_userReward",
+              "type": "uint256"
+            }
+          ],
+          "name": "WithdrawReward",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x13113F038B761D580AE431Ed189a8a6303DcE27e",
+      "transactionHash": "0x8842674bf0a6e35cef870ff663782552dd0602d2574c8a0767c10d989bf9f047"
     },
     "5777": {
       "events": {
@@ -42689,12 +42918,12 @@
         }
       },
       "links": {},
-      "address": "0xdFccc9C59c7361307d47c558ffA75840B32DbA29",
-      "transactionHash": "0xf5cfcc12bfd651659ba4ca2d2cd197c45b79eae17c2d198cfe969ac42a99c2f3"
+      "address": "0x5f8e26fAcC23FA4cbd87b8d9Dbbd33D5047abDE1",
+      "transactionHash": "0xefbd29d5be4fd9ea1c947d5ac94a68273e6d9fd3daafd11f49910efd0920630a"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-05-24T08:14:55.408Z",
+  "updatedAt": "2022-06-02T08:45:57.393Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

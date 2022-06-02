@@ -1,5 +1,5 @@
 const KStablePool = artifacts.require("KStablePool");
-constKUSDToken = artifacts.require('CUSDToken');
+constKUSDToken = artifacts.require('XUSDToken');
 const USDTToken = artifacts.require('USDTToken');
 const USDCToken = artifacts.require('USDCToken');
 const BigNumber = require('bignumber.js');

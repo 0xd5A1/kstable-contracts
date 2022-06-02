@@ -51,8 +51,8 @@ contract KUSDToken is Context, IERC20, IERC20Metadata {
      * construction.
      */
     constructor(address[] memory accounts) {
-        _name = "CUSD for Test";
-        _symbol = "cUSD";
+        _name = "XUSD for Test";
+        _symbol = "xUSD";
         _mint(accounts[1], 170_000_000_000_000_000_000_000);
         _mint(accounts[2], 10_000_000_000_000_000_000_000);
         _mint(accounts[3], 5_000_000_000_000_000_000_000);

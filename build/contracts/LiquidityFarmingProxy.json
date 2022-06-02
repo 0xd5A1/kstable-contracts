@@ -37163,8 +37163,248 @@
         }
       },
       "links": {},
-      "address": "0xe864964E9A4A7a82da3a9FF1A6e112B03DFeebE8",
-      "transactionHash": "0xcdb12dae6c5f09ada4adb0654e7f3e309c631b132784f9050aabefccd3e6e54f"
+      "address": "0x5EFE2037D7E09E4B6a4997C99EF6358a14a68D3a",
+      "transactionHash": "0xe34391f6ebcfd87bf87a686ef6a20d52a30732ef5a6d033f79ea816b338073a0"
+    },
+    "2222": {
+      "events": {
+        "0x8c82d670bc9247c2cfb6964089bc9cff0255f9caade6fbc74a13368083e55466": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_poolAddress",
+              "type": "address"
+            }
+          ],
+          "name": "AddPool",
+          "type": "event"
+        },
+        "0xa090a78bd52431eff8976d43dbaf5ca89cc10077de4ff104d3669cccb2dfc6b6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "rewardDebt",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "accTokenPerShare",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "pending",
+              "type": "uint256"
+            }
+          ],
+          "name": "CalculatePending",
+          "type": "event"
+        },
+        "0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0xbb757047c2b5f3974fe26b7c10f732e7bce710b0952a71082702781e62ae0595": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "EmergencyWithdraw",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0xcec52196e972044edde8689a1b608e459c5946b7f3e5c8cd3d6d8e126d422e1c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_minter",
+              "type": "address"
+            }
+          ],
+          "name": "SetMinter",
+          "type": "event"
+        },
+        "0x30932cbd98f47dcd146d81a1e02f9c7117856d02ae0d4e3262315fe89f88adc2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_pid",
+              "type": "uint256"
+            }
+          ],
+          "name": "SetPool",
+          "type": "event"
+        },
+        "0xefc1fd16ea80a922086ee4e995739d59b025c1bcea6d1f67855747480c83214b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            }
+          ],
+          "name": "SetToken",
+          "type": "event"
+        },
+        "0xf5d2d72d9b25d6853afd7d0554a113b705234b6a68bb36b7f143662994632411": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "accTokenPerShare",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_tokenReward",
+              "type": "uint256"
+            }
+          ],
+          "name": "UpdatePool",
+          "type": "event"
+        },
+        "0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Withdraw",
+          "type": "event"
+        },
+        "0xa999845d95de9d56580065fc2fea22f287787fabaaa900fb9d10a97e5884aaab": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_pid",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_lastRewardBlock",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "ZeroLPStaking",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x143Fd1e4552E41028302e6d63855E4719707d6A3",
+      "transactionHash": "0x83e93ce101bf7d5493bae3179dbd987f2498684e116ae31968ba6a7db46f42de"
     },
     "5777": {
       "events": {
@@ -37403,12 +37643,12 @@
         }
       },
       "links": {},
-      "address": "0x25AF99b922857C37282f578F428CB7f34335B379",
-      "transactionHash": "0x7e9490ee18336a15f48717320ed6768ce792d1232d70319b3a8146bc45c1f375"
+      "address": "0xFF6049B87215476aBf744eaA3a476cBAd46fB1cA",
+      "transactionHash": "0x9679b182b9acf6e220342b233a69d3a6da8ceec401991a3f79c900ec6a03dd87"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2022-05-24T08:14:57.784Z",
+  "updatedAt": "2022-06-02T08:45:59.142Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

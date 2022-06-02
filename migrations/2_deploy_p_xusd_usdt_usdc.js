@@ -11,13 +11,13 @@ module.exports = function (deployer, network, accounts) {
 	pArr.push(TokenUSDC.deployed());
 	return Promise.all(pArr).then(res => {
 		let config = data[deployer.network_id];
-		let stableCoins = [config.cusd, config.usdt, config.usdc];
+		let stableCoins = [res[0].address, res[1].address, res[2].address];
 		let A = config.pool.A;
 		let fee = config.pool.fee; // 0.003
 		let adminFee = config.pool.adminFee; // 2/3
 		let name = config.pool.name;
 		let symbol = config.pool.symbol;
-		return deployer.deploy(KStableTestPool, [res[0].address, res[1].address, res[2].address], A, fee, adminFee, accounts[0]).then(res => {
+		return deployer.deploy(KStableTestPool, stableCoins, A, fee, adminFee, accounts[0]).then(res => {
 			console.log('constructor[2]:' + JSON.stringify(stableCoins));
 			console.log('constructor[3]:' + A);
 			console.log('constructor[4]:' + fee);

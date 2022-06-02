@@ -159,6 +159,13 @@ module.exports = {
 			// gas: 3000000,
 			// skipDryRun: true,
 		},
+		kavamainnet: {
+			provider: () => new HDWalletProvider(mnemonics.deployer, "https://evm.kava.io"),
+			network_id: 2222,
+			chain_id: 2222,
+			// gas: 3000000,
+			// skipDryRun: true,
+		},
 		// Another network with more advanced options...
 		// advanced: {
 		// port: 8777,             // Custom port

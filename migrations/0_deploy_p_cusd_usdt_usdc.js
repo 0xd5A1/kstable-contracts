@@ -3,7 +3,7 @@ const data = require('./conf');
 
 module.exports = function (deployer, network, accounts) {
 	let config = data[deployer.network_id];
-	let stableCoins = [config.cusd, config.usdt, config.usdc];
+	let stableCoins = [config.xusd, config.usdt, config.usdc];
 	let A = config.pool.A;
 	let fee = config.pool.fee; // 0.003
 	let adminFee = config.pool.adminFee; // 2/3

@@ -1,6 +1,6 @@
 const KStablePool = artifacts.require("KStablePool");
 const TokenUSDC = artifacts.require("TokenUSDC");
-const TokenCUSD = artifacts.require("TokenCUSD");
+const TokenXUSD = artifacts.require("TokenXUSD");
 const TokenUSDT = artifacts.require("TokenUSDT");
 const data = require('./conf');
 
@@ -8,7 +8,7 @@ module.exports = function (deployer, network, accounts) {
     let config = data[deployer.network_id];
     let pArr = new Array();
     pArr.push(TokenUSDC.deployed());
-    pArr.push(TokenCUSD.deployed());
+    pArr.push(TokenXUSD.deployed());
     pArr.push(TokenUSDT.deployed());
 
     return Promise.all(pArr).then(tokens => {

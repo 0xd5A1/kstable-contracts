@@ -17,7 +17,7 @@ contract KSTToken is ERC20Votes, Ownable {
         address owner_,
         address minter_,
         address[] memory investors
-    ) ERC20("KStable Token", "KST") ERC20Permit("KStable Token") {
+    ) ERC20("KStable Token for Test", "tKST") ERC20Permit("KStable Token") {
         require(investors.length == 10, "only have 10 investor address");
         require(owner_ != minter_, "owner can't be minter.");
         require(minter_ != address(0), "minter_ can't be 0 address");

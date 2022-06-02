@@ -1,10 +1,11 @@
 const PaymentFarmingProxy = artifacts.require("PaymentFarmingProxy");
-const TokenCUSD = artifacts.require("TokenCUSD");
+const TokenUSDT = artifacts.require("TokenUSDT");
 const data = require('./conf');
 
 module.exports = function (deployer, network, accounts) {
 	let config = data[deployer.network_id];
-	return PaymentFarmingProxy.deployed().then(payment => {
-		return payment.addCoins(config.usdt, 1);
+	return PaymentFarmingProxy.deployed().then(async payment => {
+		let usdt = await TokenUSDT.deployed();
+		return payment.addCoins(usdt.address, 1);
 	});
 };
